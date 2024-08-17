@@ -1,9 +1,9 @@
-# PeriodWave: Multi-Period Flow Matching for High-Fidelity Waveform Generation <br> <sub>The official implementation of PeriodWave and PeriodWave-Turbo</sub>
+# L4Wave: Multi-L4 Flow Matching for High-Fidelity Waveform Generation <br> <sub>The official implementation of L4Wave and L4Wave-Turbo</sub>
 <p align="center">
-  <img src="periodwave.png" width="300"/>
+  <img src="L4wave.png" width="300"/>
 </p>
 
-##  <a href="https://arxiv.org/abs/2408.07547"> <img src="https://img.shields.io/badge/cs.CV-2408.07547-b31b1b?logo=arxiv&logoColor=red"></a>|<a href="https://arxiv.org/abs/2408.08019"> <img src="https://img.shields.io/badge/cs.CV-2408.08019-b31b1b?logo=arxiv&logoColor=red"></a>|[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)]()|[Demo page](https://periodwave.github.io/demo/)|[Demo Page (Turbo)]( https://periodwave-turbo.github.io/audio-demo/)
+##  <a href="https://arxiv.org/abs/2408.07547"> <img src="https://img.shields.io/badge/cs.CV-2408.07547-b31b1b?logo=arxiv&logoColor=red"></a>|<a href="https://arxiv.org/abs/2408.08019"> <img src="https://img.shields.io/badge/cs.CV-2408.08019-b31b1b?logo=arxiv&logoColor=red"></a>|[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)]()|[Demo page](https://L4wave.github.io/demo/)|[Demo Page (Turbo)]( https://L4wave-turbo.github.io/audio-demo/)
 
 **Sang-Hoon Lee<sup>1,2</sup>, Ha-Yeong Choi<sup>3</sup>, Seong-Whan Lee<sup>4</sup>**
 
@@ -12,70 +12,63 @@
 <sup>3</sup> AI Tech Lab, KT Corp., Seoul, Korea  <br>
 <sup>4</sup> Department of Artificial Intelligence, Korea University, Seoul, Korea  <br>
 
-<!--
-## Seeking Research Funding Support
-I am seeking research funding support for my upcoming project. If you are interested in providing funding or would like more information about the project, please contact me (sanghoonlee@ajou.ac.kr). Thank you for your consideration and support. 
-
-음성 합성 기술, 음성 변환 기술, 실시간 음성 생성 기술 개발 등 다양한 연구를 현재 진행 및 계획 중입니다. 산학협력연구에 관심 있으면 연락 부탁드립니다. (sanghoonlee@ajou.ac.kr)
--->
-
 This repository contains:
 
-- 🪐 A PyTorch implementation of PeriodWave and PeriodWave-Turbo 
-- ⚡️ Pre-trained PeriodWave models trained on LibriTTS (24,000 Hz, 100 bins, hop size of 256)
-- 💥 Pre-trained PeriodWave models trained on LJSpeech (22,050 Hz, 80 bins, hop size of 256)
-- 🛸 A PeriodWave training script
+- 🪐 A PyTorch implementation of L4Wave and L4Wave-Turbo 
+- ⚡️ Pre-trained L4Wave models trained on LibriTTS (24,000 Hz, 100 bins, hop size of 256)
+- 💥 Pre-trained L4Wave models trained on LJSpeech (22,050 Hz, 80 bins, hop size of 256)
+- 🛸 A L4Wave training script
 
 ## Update
-<!--- 💥 TTS/VC with PeriodWave 
+<!--- 💥 TTS/VC with L4Wave 
 
 ### 24.00.00
-- PeriodWave-Turbo Paper Update
+- L4Wave-Turbo Paper Update
 ### 24.00.00
-- We have released PeriodWave-L and PeriodWave-Turbo-L (4 Steps Models). We achieved PESQ of 4.454
+- We have released L4Wave-L and L4Wave-Turbo-L (4 Steps Models). We achieved PESQ of 4.454
 
 ### 24.08.00
-- We have released PeriodWave-Turbo (4 Steps Models).
-- We have released PeriodWave.
+- We have released L4Wave-Turbo (4 Steps Models).
+- We have released L4Wave.
 -->
 ### 24.08.16
 In this repositoy, we provide a new paradigm and architecture of Neural Vocoder that enables notably fast training and acheives SOTA performance. With 10 times fewer training times, we acheived State-of-The-Art Performance on LJSpeech and LibriTTS.
 
-First, Train the PeriodWave with conditional flow matching. 
-- [PeriodWave](https://arxiv.org/abs/2408.07547): The first successful conditional flow matching waveform generator that outperforms GAN-based Neural Vocoders
+First, Train the L4Wave with conditional flow matching. 
+- [L4Wave](https://arxiv.org/abs/2408.07547): The first successful conditional flow matching waveform generator that outperforms GAN-based Neural Vocoders
 
-Second, Accelerate the PeriodWave with adversarial flow matching optimzation. 
-- [PeriodWave-Turbo](https://arxiv.org/abs/2408.08019): SOTA Few-step Generator tuned from PeriodWave
+Second, Accelerate the L4Wave with adversarial flow matching optimzation. 
+- [L4Wave-Turbo](https://arxiv.org/abs/2408.08019): SOTA Few-step Generator tuned from L4Wave
 
 ![image](https://github.com/user-attachments/assets/06a8d005-ca07-43b6-b947-c79d55d2819c)
 
 ## Todo
-### PeriodWave
-- [ ] PeriodWave (Trained with LJSpeech, 22.05 kHz, 80 bins)
-- [ ] PeriodWave (Trained with LibriTTS-train-960, 24 kHz, 100 bins)
+### L4Wave
+- [ ] L4Wave (Trained with LJSpeech, 22.05 kHz, 80 bins)
+- [ ] L4Wave (Trained with LibriTTS-train-960, 24 kHz, 100 bins)
 - [ ] Training Code
 - [ ] Inference
-- [ ] PeriodWave with FreeU (Only Inference)
-- [ ] Evaluation (M-STFT, PESQ, Periodicity, V/UV F1, Pitch, UTMOS)
-- [ ] PeriodWave-Small (Trained with LibriTTS-train-960, 24 kHz, 100 bins)
-- [ ] PeriodWave-Large (Trained with LibriTTS-train-960, 24 kHz, 100 bins)
+- [ ] L4Wave with FreeU (Only Inference)
+- [ ] Evaluation (M-STFT, PESQ, L4icity, V/UV F1, Pitch, UTMOS)
+- [ ] L4Wave-Small (Trained with LibriTTS-train-960, 24 kHz, 100 bins)
+- [ ] L4Wave-Large (Trained with LibriTTS-train-960, 24 kHz, 100 bins)
       
-### PeriodWave-Turbo 
-- [x] Paper (PeriodWave-Turbo paper was released, https://arxiv.org/abs/2408.08019.)
-- [ ] PeriodWave-Turbo (4 Steps ODE, Euler Method)
-- [ ] PeriodWave-Turbo-Small (4 Steps ODE, Euler Method)
-- [ ] PeriodWave-Turbo-Large (4 Steps ODE, Euler Method)
+### L4Wave-Turbo 
+- [x] Paper (L4Wave-Turbo paper was released, https://arxiv.org/abs/2408.08019.)
+- [ ] L4Wave-Turbo (4 Steps ODE, Euler Method)
+- [ ] L4Wave-Turbo-Small (4 Steps ODE, Euler Method)
+- [ ] L4Wave-Turbo-Large (4 Steps ODE, Euler Method)
 
-We have compared several methods including different reconstuction losses, distillation methods, and GANs for PeriodWave-Turbo. Finetuning the PeriodWave models with fixed steps could significantly improve the performance! The PeriodWave-Turbo utilized the Multi-scale Mel-spectrogram loss and Adversarial Training (MPD, CQT-D) following BigVGAN-v2. We highly appreciate the authors of BigVGAN for their dedication to the open-source implementation. Thanks to their efforts, we were able to quickly experiment and reduce trial and error.
+We have compared several methods including different reconstuction losses, distillation methods, and GANs for L4Wave-Turbo. Finetuning the L4Wave models with fixed steps could significantly improve the performance! The L4Wave-Turbo utilized the Multi-scale Mel-spectrogram loss and Adversarial Training (MPD, CQT-D) following BigVGAN-v2. We highly appreciate the authors of BigVGAN for their dedication to the open-source implementation. Thanks to their efforts, we were able to quickly experiment and reduce trial and error.
 
-## TTS with PeriodWave
-- [ ] PeriodWave with TTS (24 kHz, 100 bins)
+## TTS with L4Wave
+- [ ] L4Wave with TTS (24 kHz, 100 bins)
       
-The era of Mel-spectrograms is returning with advancements in models like P-Flow, VoiceBox, E2-TTS, DiTTo-TTS, ARDiT-TTS, and MELLE. PeriodWave can enhance the audio quality of your TTS models, eliminating the need to rely on codec models. Mel-spectrogram with powerful generative models has the potential to surpass neural codec language models in performance.
+The era of Mel-spectrograms is returning with advancements in models like P-Flow, VoiceBox, E2-TTS, DiTTo-TTS, ARDiT-TTS, and MELLE. L4Wave can enhance the audio quality of your TTS models, eliminating the need to rely on codec models. Mel-spectrogram with powerful generative models has the potential to surpass neural codec language models in performance.
 
 <!--
-## VC with PeriodWave
-- [ ] PeriodWave with [SDT (Speech Diffusion Transformer]() (24 kHz, 80 bins, hop 240)
+## VC with L4Wave
+- [ ] L4Wave with [SDT (Speech Diffusion Transformer]() (24 kHz, 80 bins, hop 240)
 -->
       
 ## Getting Started
@@ -94,29 +87,29 @@ python extract_energy.py
 ```
 4. Change energy_max, energy_min in Config.json
    
-### Train PeriodWave
+### Train L4Wave
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3 python train_periodwave.py -c configs/periodwave.json -m periodwave
-```
-
-### Train PeriodWave-Turbo
-- Finetuning the PeriodWave with fixed steps can improve the entire performance and accelerate the inference speed (NFE 32 --> 2 or 4)
-```
-CUDA_VISIBLE_DEVICES=0,1,2,3 python train_periodwave_turbo.py -c configs/periodwave_turbo.json -m periodwave_turbo
+CUDA_VISIBLE_DEVICES=0,1,2,3 python train_L4wave.py -c configs/L4wave.json -m L4wave
 ```
 
-### Inference PeriodWave (24 kHz)
+### Train L4Wave-Turbo
+- Finetuning the L4Wave with fixed steps can improve the entire performance and accelerate the inference speed (NFE 32 --> 2 or 4)
 ```
-# PeriodWave
-CUDA_VISIBLE_DEVICES=0 python inference.py --ckpt "logs/periodwave_base_libritts/G_1000000.pth" --iter 16 --noise_scale 0.667 --solver 'midpoint'
+CUDA_VISIBLE_DEVICES=0,1,2,3 python train_L4wave_turbo.py -c configs/L4wave_turbo.json -m L4wave_turbo
+```
 
-# PeriodWave with FreeU (--s_w 0.9 --b_w 1.1)
+### Inference L4Wave (24 kHz)
+```
+# L4Wave
+CUDA_VISIBLE_DEVICES=0 python inference.py --ckpt "logs/L4wave_base_libritts/G_1000000.pth" --iter 16 --noise_scale 0.667 --solver 'midpoint'
+
+# L4Wave with FreeU (--s_w 0.9 --b_w 1.1)
 # Decreasing skip features could reduce the high-frequency noise of generated samples
-# We only recommend using FreeU with PeriodWave. Note that PeriodWave-Turbe with FreeU has different aspects so we do not use FreeU with PeriodWave-Turbo. 
-CUDA_VISIBLE_DEVICES=0 python inference_with_FreeU.py --ckpt "logs/periodwave_libritts/G_1000000.pth" --iter 16 --noise_scale 0.667 --solver 'midpoint' --s_w 0.9 --b_w 1.1
+# We only recommend using FreeU with L4Wave. Note that L4Wave-Turbe with FreeU has different aspects so we do not use FreeU with L4Wave-Turbo. 
+CUDA_VISIBLE_DEVICES=0 python inference_with_FreeU.py --ckpt "logs/L4wave_libritts/G_1000000.pth" --iter 16 --noise_scale 0.667 --solver 'midpoint' --s_w 0.9 --b_w 1.1
 
-# PeriodWave-Turbo-4steps (Highly Recommended)
-CUDA_VISIBLE_DEVICES=0 python inference.py --ckpt "logs/periodwave_turbo_base_step4_libritts_24000hz/G_274000.pth" --iter 4 --noise_scale 1 --solver 'euler'
+# L4Wave-Turbo-4steps (Highly Recommended)
+CUDA_VISIBLE_DEVICES=0 python inference.py --ckpt "logs/L4wave_turbo_base_step4_libritts_24000hz/G_274000.pth" --iter 4 --noise_scale 1 --solver 'euler'
 ```
 
 <!--
@@ -136,7 +129,7 @@ CUDA_VISIBLE_DEVICES=0 python inference.py --ckpt "logs/periodwave_turbo_base_st
 - P-Flow (Mel-spectrogram Generation): https://openreview.net/forum?id=zNA7u7wtIN
 - RF-Wave (Waveform Generation): https://github.com/bfs18/rfwave (After paper submission, we found that the paper RF-Wave also utilized FM for waveform generation. They used it on the complex spectrogram domain for efficient waveform generation. It is cool idea!)
   
-### Inspired by the multi-period discriminator of HiFi-GAN, we first distillate the multi-periodic property in generator
+### Inspired by the multi-L4 discriminator of HiFi-GAN, we first distillate the multi-L4ic property in generator
 - HiFi-GAN: https://github.com/jik876/hifi-gan
 
 ### Prior Distribution
