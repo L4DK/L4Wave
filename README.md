@@ -3,21 +3,12 @@
   <img src="L4wave.png" width="300"/>
 </p>
 
-##  <a href="https://arxiv.org/abs/2408.07547"> <img src="https://img.shields.io/badge/cs.CV-2408.07547-b31b1b?logo=arxiv&logoColor=red"></a>|<a href="https://arxiv.org/abs/2408.08019"> <img src="https://img.shields.io/badge/cs.CV-2408.08019-b31b1b?logo=arxiv&logoColor=red"></a>|[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)]()|[Demo page](https://L4wave.github.io/demo/)|[Demo Page (Turbo)]( https://L4wave-turbo.github.io/audio-demo/)
-
-**Sang-Hoon Lee<sup>1,2</sup>, Ha-Yeong Choi<sup>3</sup>, Seong-Whan Lee<sup>4</sup>**
-
-<sup>1</sup> Department of Software and Computer Engineering, Ajou University, Suwon, Korea<br>
-<sup>2</sup> Department of Artificial Intelligence, Ajou University, Suwon, Korea<br>
-<sup>3</sup> AI Tech Lab, KT Corp., Seoul, Korea  <br>
-<sup>4</sup> Department of Artificial Intelligence, Korea University, Seoul, Korea  <br>
-
 This repository contains:
 
 - 🪐 A PyTorch implementation of L4Wave and L4Wave-Turbo 
 - ⚡️ Pre-trained L4Wave models trained on LibriTTS (24,000 Hz, 100 bins, hop size of 256)
 - 💥 Pre-trained L4Wave models trained on LJSpeech (22,050 Hz, 80 bins, hop size of 256)
-- 🛸 A L4Wave training script
+- 🛸 A L4Wave training script with L4i magic
 
 ## Update
 <!--- 💥 TTS/VC with L4Wave 
